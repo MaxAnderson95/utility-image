@@ -10,6 +10,8 @@ on:
       - "main"
   release:
     types: [published]
+  schedule:
+    - cron: "0 0 * * 0"
 
 jobs:
   docker:
@@ -43,6 +45,7 @@ jobs:
             type=schedule,pattern={{date 'YYYYMMDD'}}
             type=semver,pattern={{version}}
             type=raw,value=${{ github.run_id }}
+            type=raw,value=latest
 
       - name: Build and push
         uses: docker/build-push-action@v3
