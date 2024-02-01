@@ -8,6 +8,8 @@ on:
       - "Dockerfile"
     branches:
       - "main"
+  release:
+    types: [published]
 
 jobs:
   docker:
@@ -42,10 +44,10 @@ jobs:
             type=semver,pattern={{version}}
             type=raw,value=${{ github.run_id }}
 
-      # - name: Build and push
-      #   uses: docker/build-push-action@v3
-      #   with:
-      #     context: .
-      #     platforms: "linux/amd64,linux/arm64"
-      #     push: true
-      #     tags: ${{ steps.meta.outputs.tags }}
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          platforms: "linux/amd64,linux/arm64"
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
