@@ -17,5 +17,5 @@ docker run -it ghcr.io/maxanderson95/utility-image:latest
 With Kubernetes:
 
 ```bash
-kubectl run -it utility-pod --image=ghcr.io/maxanderson95/utility-image:latest
+kubectl run -it --rm utility-pod --image=ghcr.io/maxanderson95/utility-image:latest
 ```
