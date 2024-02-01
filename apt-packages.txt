@@ -1,0 +1,13 @@
+sudo
+curl
+wget
+jq
+vim
+iputils-ping
+dnsutils
+libatomic1
+python3
+pip
+ncat
+software-properties-common
+npm
