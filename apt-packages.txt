@@ -11,3 +11,5 @@ pip
 ncat
 software-properties-common
 npm
+traceroute
+httpie
