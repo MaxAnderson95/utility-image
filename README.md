@@ -1,3 +1,5 @@
+[![ci](https://github.com/MaxAnderson95/utility-image/actions/workflows/build.yaml/badge.svg)](https://github.com/MaxAnderson95/utility-image/actions/workflows/build.yaml)
+
 # Utility Container Image
 
 This is a container image I use for testing and debugging. It includes all of my most used utilities.
